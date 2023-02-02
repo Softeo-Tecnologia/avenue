@@ -7,17 +7,10 @@ body {
 }
 
 .mainPortfolio {
-  background-color: rgb(40, 44, 52);
-  height: 1193px;
+  background-color: #222222;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.mainPortfolio .titleContainer {
-  max-width: 95%;
-  display: flex;
-  flex-direction: column;
 }
 
 .mainPortfolio .titleContainer h4 {
@@ -29,7 +22,6 @@ body {
   letter-spacing: 1.6px;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-top: 120px;
   margin-bottom: 40px;
   width: 50%;
 }
@@ -46,8 +38,10 @@ body {
 }
 
 .portfolioContainer .slidesIMG {
-  width: 507.49px;
-  height: 326px;
+  width: 50%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .mainPortfolio .portfolioContainer .carousel-control-next-icon,
@@ -127,7 +121,6 @@ body {
 
   .mainPortfolio .titleContainer {
     margin-top: -54px!important;
-    margin-left: -31px!important;
   }
 
   .mainPortfolio .portfolioContainer {
@@ -156,7 +149,6 @@ body {
   .mainPortfolio .titleContainer {
     max-width: 90%;
     margin-top: -52px;
-    margin-left: -30px;
   }
 
   .mainPortfolio .titleContainer h4 {
@@ -170,19 +162,13 @@ body {
 
   .mainPortfolio .portfolioContainer {
     margin-left: 0px;
-    width: 85%;
+    width: 100%;
   }
 
   .mainPortfolio .portfolioContainer img {
-    width: 75%;
+    width: 100%;
     min-width: 315.49px;
-    height: 209px;
-    margin-left: 26px;
-  }
-
-  .portifolioContent {
-    width: 85vw;
-    padding-left: 2%;
+    height: auto;
   }
 
   .homePortfolio {
@@ -236,12 +222,10 @@ body {
 
   .mainPortfolio .titleContainer {
     margin-top: 50px;
-    margin-left: -40px;
   }
 
   .mainPortfolio .titleContainer {
     margin-top: 50px;
-    margin-left: -40px;
   }
 
   .mainPortfolio .titleContainer .takeALook {
@@ -263,17 +247,8 @@ body {
     margin-bottom: 10px;
   }
 
-  .portifolioContent {
-    width: 85vw;
-      padding-left: 2%;
-  }
-
   .mainPortfolio .titleContainer {
     padding-left: 0px;
-  }
-
-  .mainPortfolio .portfolioContainer {
-    padding-left: 60px;
   }
 }
 
@@ -281,11 +256,6 @@ body {
   .mainPortfolio .portfolioContainer img {
     width: 415.49px;
     height: 295px;
-  }
-
-  .portifolioContent {
-    width: 850px;
-    max-width: 100%;
   }
 
   .controlsPortfolio {
@@ -300,10 +270,6 @@ body {
 }
 
 @media screen and (min-width: 1201px) {
-  .portifolioContent {
-    width: 1014px;
-    max-width: 100%;
-  }
 
   .controlsPortfolio {
     display: flex;
@@ -315,4 +281,12 @@ body {
     margin-top: -30px;
     padding-left: 5px;
   }
+}
+
+.mainPortfolio .slides{
+  width: 100%;
+}
+
+.mainPortfolio .titleContainer{
+  width: 100%;
 }

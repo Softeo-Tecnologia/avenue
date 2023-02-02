@@ -7,12 +7,25 @@ body {
 }
 
 .homeMain {
-    height: 870px;
-    background: linear-gradient(359.69deg, rgba(0, 0, 0, 0.3) 0.37%, rgba(0, 0, 0, 0) 99.83%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/public/assets/img/home/main/bg.webp');
-    background-position: center;
+    min-height: 100vh;
+    background: url('/public/assets/img/home/main/hero.webp');
+    background-position: bottom left;
     background-size: cover;
-    padding-top: 190px;
-    padding-left: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 2% 0;
+}
+
+.homeMain.mini{
+    min-height: 75vh;
+}
+
+@media screen and (max-width: 992px) {
+    .homeMain.mini{
+        min-height: 60vh;
+    }
 }
 
 .homeMain .row {
@@ -21,17 +34,6 @@ body {
 
 .homeText {
     padding: 0;
-}
-
-.homeMain h1 {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 130%;
-    color: #FFFFFF;
-    padding-right: 380px;
-    padding-top: 150px;
 }
 
 .homeMain p {
@@ -61,7 +63,7 @@ body {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    padding: 32px 340px 96px 320px; /* top right bottom left */
+    /* padding: 32px 340px 96px 320px; /* top right bottom left */
 }
 
 .homePresentations .homeCarousel {
@@ -78,13 +80,8 @@ body {
     display: none;
 }
 
-.seeAllProjects {
-    height: 160px;
-    background-color: rgb(40, 44, 52);
-    margin-top: -100px!important;
-    display: flex;
-    justify-content: space-around;
-    margin-left: -800px;
+.seeAllProjects{
+    margin-top: 20px;
 }
 
 .seeAllProjects a {
@@ -92,11 +89,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #FFFFFF;
-    margin-left: 160px;
-}
-
-.homeQuestions {
-    padding: 240px 80px;
+    margin-left: 10px;
 }
 
 .homeQuestions h1 {
@@ -169,19 +162,6 @@ body {
 
 
 @media screen and (max-width: 350px ) {
-    .homeMain {
-        height: 850px;
-        padding-top: 190px;
-        padding-left: 20px!important;
-    }
-    
-    .homeMain h1 {
-        max-width: 90%;
-        font-size: 24px!important;
-        padding-right: 50px;
-        padding-top: 10px;
-    }
-    
     .homeMain p {
         font-size: 18px;
     }
@@ -208,18 +188,6 @@ body {
         width: 100%;
     }
 
-    .seeAllProjects {
-        margin-top: 0px!important;
-    }
-    
-    .seeAllProjects a {
-        margin-left: 40px;
-    }
-
-    .homeQuestions {
-        padding: 100px 32px 0px 32px;
-    }
-
     .homeQuestions h1 {
         font-size: 28px;
     }
@@ -240,12 +208,6 @@ body {
 }
 
 @media (min-width: 351px) and (max-width: 576px ) {
-    .homeMain {
-        height: 950px;
-        padding-top: 120px;
-        padding-left: 40px;
-    }
-
     .homeMain .row {
         margin: 0;
     }
@@ -254,27 +216,20 @@ body {
         max-width: 100%;
         margin: 0;
     }
-    
-    .homeMain h1 {
-        max-width: 90%;
-        font-size: 32px;
-        padding-right: 100px!important;
-        margin-right: 0;
-    }
-    
+
     .homeMain p {
         font-size: 20px;
         padding-right: 50px;
     }
 
     .homePresentations {
-        padding: 80px 50px;
+        padding: 40px 0px;
     }
     
     .homePresentations h3 {
         font-size: 18px;
         line-height: 26px;
-        padding: 8px 20px 30px 20px;
+        padding: 8px 0px 30px 0px;
     }
 
     .homePresentations .homeCarousel {
@@ -286,17 +241,8 @@ body {
         height: 180px;
     }
 
-    .seeAllProjects {
-        margin-top: 0px!important;
-        margin-left: -200px;
-    }
-    
-    .seeAllProjects a {
-        margin-left: 40px;
-    }
 
     .homeQuestions {
-        padding: 80px 30px;
         text-align: left;
     }
     
@@ -319,19 +265,6 @@ body {
 }
 
 @media (min-width: 577px) and (max-width: 992px ) { 
-    .homeMain {
-        height: 850px;
-        padding-top:60px;
-        padding-left: 80px;
-    }
-    
-    .homeMain h1 {
-        font-size: 52px;
-        line-height: 130%;
-        padding-right: 180px;
-        padding-top: 160px;
-    }
-
     .homeMain p {
         font-size: 18px;
     }
@@ -352,14 +285,6 @@ body {
         width: 100%;
         height: 35px;
         margin-bottom: 20px;
-    }
-
-    .seeAllProjects {
-        margin-top: 0px!important;
-    }
-    
-    .homeQuestions {
-        padding: 80px 20px;
     }
 
     .homeQuestions .faqQuestion {
@@ -389,16 +314,24 @@ body {
         text-transform: uppercase;
         color: #888888;
     }
-
-    .seeAllProjects {
-        display: flex;
-        justify-content: space-around;
-        margin-left: -560px;
-    }
 }
 
 @media only screen and (min-width: 993px) {
     .homePresentations .row {
         width: 100vw;
     }
+}
+
+@media screen and (max-width: 480px) {
+    .controllerDrag{
+        margin-top: 50px;
+    }
+}
+
+.chomeCarousel{ padding: 100px; }
+@media screen and (max-width: 1366px){
+    .chomeCarousel{ padding: 50px; }
+}
+@media screen and (max-width: 1024px){
+    .chomeCarousel{ padding: 0px; }
 }

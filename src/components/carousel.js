@@ -5,6 +5,13 @@ import ReactSwipe from "react-swipe";
 
 import "./styles/carousel.css";
 
+const CustomHandle = () => (
+  <svg viewBox="0 0 28 67" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMax slice">
+    <path className="custom-handle--outer" d="M3.5 0V42.8809L24.9355 64" stroke="rgb(244, 189, 3)" stroke-width="3.1" />
+    <path className="custom-handle--inner" d="M3.5 0V42.8809L24.9355 64" stroke="#000" stroke-width="3" />
+  </svg>
+)
+
 function ControlledCarousel() {
   let reactSwipeEl;
 
@@ -31,46 +38,57 @@ function ControlledCarousel() {
         </div>
       </div>
 
-      <ReactSwipe
-        className="carousel"
-        swipeOptions={{ continuous: true, disableScroll: true }}
-        ref={(el) => (reactSwipeEl = el)}
-        widthOfSiblingSlidePreview={1500}
-      >
+      <div className="carousel-wrapper">
+        <ReactSwipe
+          className="carousel"
+          swipeOptions={{ continuous: true, disableScroll: true }}
+          ref={(el) => (reactSwipeEl = el)}
+          widthOfSiblingSlidePreview={1500}
+        >
 
-        <div className="carouselContent">
-          <ImageSlider
-            image1="/assets/img/home/carousel/AB-Sampling-Deck-_after_.webp"
-            image2="/assets/img/home/carousel/AB-Sampling-Deck-_before_-1.webp"
-            onSlide={() => {
-              console.log("sliding");
-            }}
-            sliderColor="transparent"
-          />
-        </div>
+          <div className="carouselContent">
+            <ImageSlider
+              customHandle={
+                <CustomHandle />
+              }
+              image1="/assets/img/home/carousel/AB-Sampling-Deck-_after_.webp"
+              image2="/assets/img/home/carousel/AB-Sampling-Deck-_before_-1.webp"
+              onSlide={() => {
+                console.log("sliding");
+              }}
+              sliderColor="transparent"
+            />
+          </div>
 
-        <div className="carouselContent">
-          <ImageSlider
-            image1="/assets/img/home/carousel/Gaylord_after.webp"
-            image2="/assets/img/home/carousel/Gaylord-_before__Page_2.webp"
-            onSlide={() => {
-              console.log("sliding");
-            }}
-            sliderColor="transparent"
-          />
-        </div>
+          <div className="carouselContent">
+            <ImageSlider
+              customHandle={
+                <CustomHandle />
+              }
+              image1="/assets/img/home/carousel/Gaylord_after.webp"
+              image2="/assets/img/home/carousel/Gaylord-_before__Page_2.webp"
+              onSlide={() => {
+                console.log("sliding");
+              }}
+              sliderColor="transparent"
+            />
+          </div>
 
-        <div className="carouselContent">
-          <ImageSlider
-            image1="/assets/img/home/carousel/Canteen_after-01.webp"
-            image2="/assets/img/home/carousel/Canteen_before-01.webp"
-            onSlide={() => {
-              console.log("sliding");
-            }}
-            sliderColor="transparent"
-          />
-        </div>
-      </ReactSwipe>
+          <div className="carouselContent">
+            <ImageSlider
+              customHandle={
+                <CustomHandle />
+              }
+              image1="/assets/img/home/carousel/Canteen_after-01.webp"
+              image2="/assets/img/home/carousel/Canteen_before-01.webp"
+              onSlide={() => {
+                console.log("sliding");
+              }}
+              sliderColor="transparent"
+            />
+          </div>
+        </ReactSwipe>
+      </div>
 
       <div className="controllerDrag">
         <h6>← CLICK & DRAG →</h6>
